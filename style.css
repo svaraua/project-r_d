@@ -13,6 +13,7 @@
 
 .table-header {
     text-transform: uppercase;
+    background-color: rgb(102, 224, 91);
 }
 
 .link {
@@ -31,4 +32,18 @@
 
 .skills-list {
     list-style-type: square;
+}
+
+.border-bottom {
+    border-bottom: 2px solid rgb(102, 224, 91);
+    width: 1000px;
+}
+
+.photo {
+    border: 2px solid rgb(102, 224, 91);
+    padding: 10px;
+}
+
+.table {
+    background-color: rgb(215, 250, 212)
 }
