@@ -9,6 +9,11 @@
 
 .fullname {
     font-style: italic;
+    float: left;
+}
+
+.hireme {
+    clear: both;
 }
 
 .table-header {
@@ -19,6 +24,7 @@
 .link {
     color: #00f;
     text-decoration: underline;
+    margin-top: 0;
 }
 
 .link:visited {
@@ -42,8 +48,12 @@
 .photo {
     border: 2px solid rgb(102, 224, 91);
     padding: 10px;
+    width: 100px;
+    height: 100px;
+    float: right;
 }
 
 .table {
-    background-color: rgb(215, 250, 212)
+    background-color: rgb(215, 250, 212);
+    width: 100%;
 }
