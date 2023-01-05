@@ -9,7 +9,6 @@
 
 .fullname {
     font-style: italic;
-    float: left;
 }
 
 .hireme {
@@ -20,6 +19,21 @@
     text-transform: uppercase;
     background-color: rgb(102, 224, 91);
 }
+
+.wrapper a {
+    color: #00f;
+    text-decoration: underline;
+    margin-top: 0;
+}
+.wrapper a:visited {
+    color: #005;
+    text-decoration: underline;
+}
+
+.wrapper a:hover {
+    text-decoration: none;
+}
+/* refactored 
 
 .link {
     color: #00f;
@@ -35,14 +49,14 @@
 .link:hover {
     text-decoration: none;
 }
-
+*/
 .skills-list {
     list-style-type: square;
 }
 
 .border-bottom {
     border-bottom: 2px solid rgb(102, 224, 91);
-    width: 1000px;
+    width: 300px;
 }
 
 .photo {
