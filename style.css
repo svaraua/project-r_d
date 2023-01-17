@@ -11,10 +11,6 @@
     font-style: italic;
 }
 
-.hireme {
-    clear: both;
-}
-
 .table-header {
     text-transform: uppercase;
     background-color: rgb(102, 224, 91);
@@ -64,10 +60,14 @@
     padding: 10px;
     width: 100px;
     height: 100px;
-    float: right;
 }
 
 .table {
     background-color: rgb(215, 250, 212);
     width: 100%;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
 }
