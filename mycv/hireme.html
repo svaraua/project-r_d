@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire me!</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="form-wrapper">
+        <h1 class="form-title">Hire me</h1>
+        <h3 class="form-title">Contact information</h3>
+        <table class="form-table" cellspacing="0" cellpadding="5">
+            <tbody>
+                <tr>
+                    <th>Phone</th>
+                    <td><a href="tel:to">+380730625885</a></td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td>Kyiv, Ukraine</td>
+                </tr>
+            </tbody>
+        </table>
+        <form action="./hireme.html" method="get" class="form">
+            <fieldset>
+                <legend>Contact form</legend>
+                <label class="form-item" for="e-mail">
+                    <div class="label-title">
+                        E-mail<span>*</span>
+                    </div>
+                </label>
+                <input type="email" name="E-mail" id="e-mail" class="email" placeholder="Enter the e-mail" required />
+                <p class="error">Invalid e-mail format</p>
+                <label class="form-item" for="form-description">
+                    <div class="label-title">
+                        Description
+                    </div>
+                </label>
+                <textarea name="Description" id="form-description" cols="30" rows="5" placeholder="Hint text"></textarea>
+                <label class="form-item" for="work-type">
+                    <div class="label-title">
+                        Work type
+                    </div>
+                </label>
+                <select name="work-type" id="work-type">
+                    <option value="Office-work">Office-work</option>
+                    <option value="Remote-work">Remote-work</option>
+                    <option value="Project-work">Project-work</option>
+                </select> <br/>
+                <input type="submit" value="Hire me" class="button">
+        
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
