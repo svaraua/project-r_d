@@ -136,6 +136,7 @@ textarea {
     appearance: none;
     background-color: transparent;
     border: none;
+    outline: none;
 }
 
 input,
@@ -148,16 +149,17 @@ textarea {
     width: 460px;
 }
 
-input:invalid,
-select:invalid,
-textarea:invalid {
+.email:invalid {
     border: 1px solid #ED0131;
     border-radius: 4px;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
+.email:valid {
+    border: 1px solid #0E6245;
+    border-radius: 4px;
+}
+
+.email:focus {
     outline: 1px solid #0048D9;
     border-radius: 4px;
     border: none;
@@ -165,6 +167,7 @@ textarea:focus {
 
 select {
     background: url('/arrow.svg') no-repeat center right 0.75rem;
+    background-color: #F8FAFC;
 }
 
 input::placeholder,
@@ -219,7 +222,7 @@ fieldset {
     color: #fff;
     padding: 4px 16px;
     border-radius: 6px;
-    width: 82px;
+    width: 92px;
     height: 32px;
     font-weight: 500;
     cursor: pointer;
@@ -246,5 +249,15 @@ label {
 }
 
 .email:invalid + .error {
+    display: block;
+}
+
+.success {
+    display: none;
+    font-size: 12px;
+    color: #0E6245
+}
+
+.email:valid +.error + .success {
     display: block;
 }
