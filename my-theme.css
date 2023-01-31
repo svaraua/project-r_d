@@ -1,0 +1,18 @@
+.my-theme {
+    /* Colors */
+    --color-main-primary: #3A5A40;
+    --color-sidebar-background: #A3B18A;
+    --color-main-dark: #344E41;
+    --color-first-name: #DAD7CD;
+    --color-second-name-link: #4F772D;
+    --color-sidebar-border-text: #132A13;
+
+    /* margins, paddings */
+    --margin-top-primary: 50px;
+    --margin-top-secondary: 10px;
+    --margin-left-primary: 40px;
+    --margin-bottom-primary: 35px;
+    --margin-bottom-secondary: 15px;
+    --margin-right-primary: 50px;
+    --padding-bottom-primary: 5px;
+}

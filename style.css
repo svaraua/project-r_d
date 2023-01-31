@@ -4,7 +4,7 @@
 }
 
 .wrapper {
-    color: #263036;
+    color: var(--color-main-primary);
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -13,29 +13,29 @@
 }
 
 .sidebar {
-    background-color: #86A3B4;
+    background-color: var(--color-sidebar-background);
     max-width: 385px;
-    border-left: solid 1px #1E1E1E;
-    border-right: solid 1px #1E1E1E;
+    border-left: solid 1px var(--color-main-dark);
+    border-right: solid 1px var(--color-main-dark);
     position: sticky;
     top: 0;
     height: 100vh;
 }
 
 .fullname {
-    margin-left: 40px;
-    margin-top: 60px;
-    margin-bottom: 35px;
+    margin-left: var(--margin-left-primary);
+    margin-top: var(--margin-top-primary);
+    margin-bottom: var(--margin-bottom-primary);
     font-size: 40px;
     line-height: 48px;
 }
 
 .first-name {
-    color: #fff;
+    color: var(--color-first-name)
 }
 
 .second-name {
-    color: #1C2E8C;
+    color: var(--color-second-name-link);
 }
 
 .photo {
@@ -44,7 +44,7 @@
 }
 
 .sidebar-content {
-    margin-top: 50px;
+    margin-top: var(--margin-top-primary);
 }
 
 .sidebar-content ul {
@@ -52,34 +52,34 @@
 }
 
 .content-item {
-    margin-left: 40px;
-    margin-right: 50px;
-    margin-bottom: 35px;
+    margin-left: var(--margin-left-primary);
+    margin-right: var(--margin-right-primary);
+    margin-bottom: var(--margin-bottom-primary);
 }
 
 .title {
     font-size: 32px;
     line-height: 39px;
-    padding-bottom: 10px;
-    border-bottom: solid 6px #1E1E1E;
-    margin-bottom: 30px;
+    padding-bottom: 5px;
+    border-bottom: solid 6px var(--color-main-dark);
+    margin-bottom: var(--margin-bottom-primary)
 }
 
 .title.main {
     font-size: 36px;
     line-height: 44px;
-    padding-bottom: 30px;
-    color: #1E1E1E;
-    border-bottom: solid 6px #000;
+    padding-bottom: calc(var(--padding-bottom-primary) * 6);
+    color: var(--color-main-dark);
+    border-bottom: solid 6px var(--color-sidebar-border-text)
 }
 
 .contact li a {
     text-decoration: none;
-    color: #1C2E8C;
+    color: var(--color-second-name-link);
 }
 
 #phone {
-    color: #263036;
+    color: var(--color-main-primary);
 }
 
 .contact-title {
@@ -90,27 +90,27 @@
 .contact-text {
     font-size: 16px;
     line-height: 19px;
-    margin-top: 10px;
-    margin-bottom: 35px;
+    margin-top: var(--margin-top-secondary);
+    margin-bottom: var(--margin-bottom-primary);
 }
 
 .languages li {
-    color: #1E1E1E;
+    color: var(--color-main-dark);
     font-size: 20px;
     line-height: 24px;
-    margin-bottom: 15px;
+    margin-bottom: var(--margin-bottom-secondary);
 }
 
 .main-content {
-    margin: 60px 55px 0;
+    margin: var(--margin-top-primary) calc(var(--margin-left-primary) + 15px);
 }
 
 .main-content-item {
     max-width: 706px;
-    margin-bottom: 50px;
+    margin-bottom: var(--margin-top-primary);
     font-size: 16px;
     line-height: 19px;
-    color: #263036;
+    color: var(--color-main-primary);
 }
 
 .skills-list {
@@ -119,10 +119,10 @@
 }
 
 .item-text {
-    color: #000;
+    color: var(--color-sidebar-border-text);
     font-size: 14px;
     line-height: 17px;
-    margin-bottom: 15px;
+    margin-bottom: var(--margin-bottom-secondary);
 }
 
 .main-content-item span {
@@ -131,6 +131,16 @@
 
 .fw400 {
     font-weight: 400;
+}
+
+.hire-me {
+    margin-left: var(--margin-left-primary);
+    margin-bottom: var(--margin-bottom-primary);
+}
+
+.hire-me a {
+    text-decoration: none;
+    color: var(--color-second-name-link);
 }
 
 /* ----form---- */
@@ -277,3 +287,4 @@ label {
 .email:valid +.error + .success {
     display: block;
 }
+
