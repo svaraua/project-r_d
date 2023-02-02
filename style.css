@@ -15,8 +15,7 @@
 .sidebar {
     background-color: var(--color-sidebar-background);
     max-width: 385px;
-    border-left: solid 1px var(--color-main-dark);
-    border-right: solid 1px var(--color-main-dark);
+    border: solid 1px var(--color-main-dark);
     position: sticky;
     top: 0;
     height: 100vh;
@@ -116,6 +115,7 @@
 .skills-list {
     columns: 2;
     list-style-position: inside;
+    column-gap: 0px;
 }
 
 .item-text {
@@ -288,3 +288,66 @@ label {
     display: block;
 }
 
+@media screen and (max-width: 860px) {
+    .wrapper {
+        width: 100%;
+        }
+
+    .sidebar {
+        width: 385px;
+        position: unset;
+        height: auto;
+        }
+
+    .main-content {
+        box-sizing: border-box;
+        width: 385px;
+        padding-left: 25px;
+        padding-right: 30px;
+        padding-top: 50px;
+        margin: 0;
+    }
+
+    .content-item {
+        margin-left: 25px;
+        margin-right: 65px;
+    }
+
+    .skills-list {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .sidebar {
+        width: 385px;
+        position: unset;
+        height: auto;
+    }
+
+    .main-content {
+        box-sizing: border-box;
+        width: 385px;
+        padding-left: 25px;
+        padding-right: 30px;
+        padding-top: 0;
+        margin: 0;
+    }
+
+    .content-item {
+        margin-left: 25px;
+        margin-right: 65px;
+    }
+
+    .skills-list {
+        font-size: 15px;
+    }
+}
