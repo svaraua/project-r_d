@@ -19,6 +19,7 @@
     position: sticky;
     top: 0;
     height: 100vh;
+    box-shadow: 1px 0px 13px 7px rgba(80, 75, 75, 0.25);
 }
 
 .fullname {
@@ -40,6 +41,11 @@
 .photo {
     width: 100%;
     height: auto;
+}
+
+.photo:hover {
+    transform: scale(1.75) translate(83px, 63px);
+    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
 }
 
 .sidebar-content {
@@ -123,6 +129,14 @@
     font-size: 14px;
     line-height: 17px;
     margin-bottom: var(--margin-bottom-secondary);
+}
+
+.item-text.previous {
+    opacity: 0.7;
+}
+
+.item-text.previous:hover {
+    opacity: 1;
 }
 
 .main-content-item span {
@@ -316,6 +330,11 @@ label {
     .skills-list {
         font-size: 15px;
     }
+
+    .photo:hover {
+    transform: none;
+    box-shadow: none;
+    }
 }
 
 @media screen and (max-width: 770px) {
@@ -349,5 +368,10 @@ label {
 
     .skills-list {
         font-size: 15px;
+    }
+
+    .photo:hover {
+    transform: none;
+    box-shadow: none;
     }
 }
