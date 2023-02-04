@@ -204,7 +204,7 @@ textarea {
 }
 
 select {
-    background: url('/arrow.svg') no-repeat center right 0.75rem;
+    background: url('./arrow.svg') no-repeat center right 0.75rem;
     background-color: #F8FAFC;
 }
 
