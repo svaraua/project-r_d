@@ -16,10 +16,9 @@
     background-color: var(--color-sidebar-background);
     max-width: 385px;
     border: solid 1px var(--color-main-dark);
-    position: sticky;
-    top: 0;
-    height: 100vh;
     box-shadow: 1px 0px 13px 7px rgba(80, 75, 75, 0.25);
+    animation: sidebar .5s ease-in forwards;
+    z-index: 3;
 }
 
 .fullname {
@@ -41,6 +40,7 @@
 .photo {
     width: 100%;
     height: auto;
+    transition: transform 0.5s ease;
 }
 
 .photo:hover {
@@ -108,6 +108,7 @@
 
 .main-content {
     margin: var(--margin-top-primary) calc(var(--margin-left-primary) + 15px);
+    animation: main-content 1s ease-in forwards;
 }
 
 .main-content-item {
@@ -133,6 +134,7 @@
 
 .item-text.previous {
     opacity: 0.7;
+    transition: all 1s ease;
 }
 
 .item-text.previous:hover {
@@ -176,6 +178,7 @@
     left: calc(50% - 246px);
     background-color: #fff;
     z-index: 1;
+    animation: form 1s linear;
 }
 
 input,
@@ -183,7 +186,6 @@ select,
 textarea {
     appearance: none;
     border: none;
-    outline: none;
 }
 
 input,
@@ -373,5 +375,41 @@ label {
     .photo:hover {
     transform: none;
     box-shadow: none;
+    }
+}
+
+/* Animation */
+@keyframes sidebar {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes main-content {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes form {
+    from {
+        transform: scale(2);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
     }
 }
