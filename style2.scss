@@ -17,7 +17,8 @@
     max-width: 385px;
     border: solid 1px var(--color-main-dark);
     box-shadow: 1px 0px 13px 7px rgba(80, 75, 75, 0.25);
-    animation: sidebar 1s ease-in forwards;
+    @include animation(1s, sidebar);
+    // animation: sidebar 1s ease-in forwards;
     z-index: 3;
 }
 
@@ -41,19 +42,18 @@
     width: 100%;
     height: auto;
     transition: transform 0.5s ease;
-}
 
-.photo:hover {
-    transform: scale(1.75) translate(83px, 63px);
-    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
+    &:hover {
+            transform: scale(1.75) translate(83px, 63px);
+            box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
+        }
 }
 
 .sidebar-content {
     margin-top: var(--margin-top-primary);
-}
-
-.sidebar-content ul {
-    list-style-type: none;
+    ul {
+            list-style-type: none;
+        }
 }
 
 .content-item {
@@ -78,9 +78,13 @@
     border-bottom: solid 6px var(--color-sidebar-border-text)
 }
 
-.contact li a {
+.contact {
+    li {
+        a {
     text-decoration: none;
     color: var(--color-second-name-link);
+        }
+    }
 }
 
 #phone {
@@ -99,16 +103,19 @@
     margin-bottom: var(--margin-bottom-primary);
 }
 
-.languages li {
+.languages {
+    li {
     color: var(--color-main-dark);
     font-size: 20px;
     line-height: 24px;
     margin-bottom: var(--margin-bottom-secondary);
+    }
 }
 
 .main-content {
     margin: var(--margin-top-primary) calc(var(--margin-left-primary) + 15px);
-    animation: main-content 1s ease-in forwards;
+    @include animation(1s, main-content);
+    // animation: main-content 1s ease-in forwards;
 }
 
 .main-content-item {
@@ -117,6 +124,9 @@
     font-size: 16px;
     line-height: 19px;
     color: var(--color-main-primary);
+    span {
+            font-weight: 600;
+        }
 }
 
 .skills-list {
@@ -135,14 +145,9 @@
 .item-text.previous {
     opacity: 0.7;
     transition: all 1s ease;
-}
-
-.item-text.previous:hover {
-    opacity: 1;
-}
-
-.main-content-item span {
-    font-weight: 600;
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .fw400 {
@@ -152,11 +157,10 @@
 .hire-me {
     margin-left: var(--margin-left-primary);
     margin-bottom: var(--margin-bottom-primary);
-}
-
-.hire-me a {
-    text-decoration: none;
-    color: var(--color-second-name-link);
+    a {
+            text-decoration: none;
+            color: var(--color-second-name-link);
+        }
 }
 
 /* ----form---- */
@@ -188,9 +192,7 @@ textarea {
     border: none;
 }
 
-input,
-select,
-textarea {
+input {
     background-color: #F8FAFC;
     padding: 12px;
     color: #3B4256;
@@ -198,21 +200,41 @@ textarea {
     width: 460px;
     box-sizing: border-box;
     font-family: inherit;
+    &::placeholder {
+            color: #B8BCCA;
+        }
 }
 
-.email:invalid {
-    border: 1px solid #ED0131;
-    border-radius: 4px;
+select {
+    @extend input;
 }
 
-.email:valid {
-    border: 1px solid #0E6245;
-    border-radius: 4px;
+textarea {
+    @extend input;
+    &::placeholder {
+            color: #B8BCCA;
+        }
 }
 
-.email:focus {
-    border: 1px solid #0048D9;
-    border-radius: 4px;
+.email {
+    &:invalid {
+            border: 1px solid #ED0131;
+            border-radius: 4px;
+    }
+    &:valid {
+        border: 1px solid #0E6245;
+        border-radius: 4px;
+    }
+    &:focus {
+        border: 1px solid #0048D9;
+        border-radius: 4px;
+    }
+    &:invalid+.error {
+        display: block;
+    }
+    &:valid+.error+.success {
+        display: block;
+    }
 }
 
 .description {
@@ -224,22 +246,26 @@ select {
     background-color: #F8FAFC;
 }
 
-input::placeholder,
-textarea::placeholder {
-    color: #B8BCCA;
-}
 
-table,
-th,
-td {
+table {
     border: solid 1px #000;
     border-collapse: collapse;
     padding: 5px;
 }
 
-.form-table a {
-    text-decoration: none;
-    color: #000;
+th {
+    @extend table;
+}
+
+td {
+    @extend table;
+}
+
+.form-table {
+    a {
+        text-decoration: none;
+        color: #000;
+    }
 }
 
 fieldset {
@@ -269,14 +295,15 @@ fieldset {
     font-weight: 500;
     cursor: pointer;
     margin-top: 20px;
+    &:hover {
+            background-color: #002266;
+        }
 }
 
-.button:hover {
-    background-color: #002266;
-}
-
-.label-title span {
+.label-title {
+    span {
     color: #ED0131;
+    }
 }
 
 label {
@@ -290,30 +317,22 @@ label {
     color: #ED0131;
 }
 
-.email:invalid + .error {
-    display: block;
-}
-
 .success {
     display: none;
     font-size: 12px;
     color: #0E6245
 }
 
-.email:valid +.error + .success {
-    display: block;
-}
-
 @media screen and (max-width: 860px) {
     .wrapper {
         width: 100%;
-        }
+    }
 
     .sidebar {
         width: 385px;
         position: unset;
         height: auto;
-        }
+    }
 
     .main-content {
         box-sizing: border-box;
@@ -333,9 +352,11 @@ label {
         font-size: 15px;
     }
 
-    .photo:hover {
-    transform: none;
-    box-shadow: none;
+    .photo {
+        &:hover {
+        transform: none;
+        box-shadow: none;
+        }
     }
 }
 
@@ -372,13 +393,22 @@ label {
         font-size: 15px;
     }
 
-    .photo:hover {
-    transform: none;
-    box-shadow: none;
+    .photo {
+        &:hover {
+        transform: none;
+        box-shadow: none;
+        }
     }
 }
 
 /* Animation */
+@mixin animation ($duration, $name) {
+animation-name: $name;
+animation-duration: $duration;
+animation-timing-function: ease-in;
+animation-fill-mode: forwards;
+}
+
 @keyframes sidebar {
     from {
         opacity: 0;
@@ -401,7 +431,7 @@ label {
         opacity: 0;
         transform: translateY(50%);
     }
-    
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -413,8 +443,25 @@ label {
         transform: scale(2);
         opacity: 0;
     }
+
     to {
         transform: scale(1);
         opacity: 1;
     }
 }
+
+//  Themes
+
+:root {
+    /* margins, paddings */
+        --margin-top-primary: 50px;
+        --margin-top-secondary: 10px;
+        --margin-left-primary: 40px;
+        --margin-bottom-primary: 35px;
+        --margin-bottom-secondary: 15px;
+        --margin-right-primary: 50px;
+        --padding-bottom-primary: 5px;
+}
+
+@import '_main-theme.scss';
+@import '_my-theme.scss';
