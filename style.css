@@ -17,7 +17,7 @@
     max-width: 385px;
     border: solid 1px var(--color-main-dark);
     box-shadow: 1px 0px 13px 7px rgba(80, 75, 75, 0.25);
-    animation: sidebar .5s ease-in forwards;
+    animation: sidebar 1s ease-in forwards;
     z-index: 3;
 }
 
@@ -392,12 +392,17 @@ label {
 }
 
 @keyframes main-content {
-    from {
+    0% {
         opacity: 0;
         transform: translateY(50%);
     }
 
-    to {
+    50% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
