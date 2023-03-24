@@ -75,15 +75,14 @@ animation-fill-mode: forwards;
     line-height: 39px;
     padding-bottom: 5px;
     border-bottom: solid 6px var(--color-main-dark);
-    margin-bottom: var(--margin-bottom-primary)
-}
-
-.title.main {
-    font-size: 36px;
-    line-height: 44px;
-    padding-bottom: calc(var(--padding-bottom-primary) * 6);
-    color: var(--color-main-dark);
-    border-bottom: solid 6px var(--color-sidebar-border-text)
+    margin-bottom: var(--margin-bottom-primary);
+    &.main {
+            font-size: 36px;
+            line-height: 44px;
+            padding-bottom: calc(var(--padding-bottom-primary) * 6);
+            color: var(--color-main-dark);
+            border-bottom: solid 6px var(--color-sidebar-border-text)
+        }
 }
 
 .contact {
@@ -93,22 +92,21 @@ animation-fill-mode: forwards;
     color: var(--color-second-name-link);
         }
     }
+    &-title {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    &-text {
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: var(--margin-top-secondary);
+        margin-bottom: var(--margin-bottom-primary);
+    }
 }
 
 #phone {
     color: var(--color-main-primary);
-}
-
-.contact-title {
-    font-size: 24px;
-    line-height: 29px;
-}
-
-.contact-text {
-    font-size: 16px;
-    line-height: 19px;
-    margin-top: var(--margin-top-secondary);
-    margin-bottom: var(--margin-bottom-primary);
 }
 
 .languages {
