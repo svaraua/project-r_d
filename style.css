@@ -132,11 +132,11 @@
 }
 
 .item-text.previous {
-    opacity: 0.7;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .item-text.previous:hover {
-    opacity: 1;
+    color: rgba(0, 0, 0, 1);
 }
 
 .main-content-item span {
@@ -331,10 +331,6 @@ label {
         font-size: 15px;
     }
 
-    .photo:hover {
-    transform: none;
-    box-shadow: none;
-    }
 }
 
 @media screen and (max-width: 770px) {
